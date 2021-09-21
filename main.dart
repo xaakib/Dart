@@ -1,7 +1,11 @@
-import '';
+import 'dart:io';
 import 'demo.dart';
 DemoClass demoClass = DemoClass();
-void main(){
- var printOutput = demoClass.printObject('Ashiq', 25);
- print("printed Output : $printOutput");
+
+
+void main() {
+  String? name = stdin.readLineSync();
+  int? age = int.parse(stdin.readLineSync()!);
+  var printOutput = demoClass.printObject(name!, age);
+  print("printed Output : $printOutput");
 }

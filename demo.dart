@@ -1,26 +1,18 @@
+import 'dart:io';
+
 class DemoClass {
-   var userId ;
-  int id =2;
   printObject(String name, int age) {
-    for (var i = 0; i < age; i++) {
-      var equalValue = i;
-    }
     var equalValue = name + age.toString();
     return equalValue;
   }
-   listOfMapFind(){
- 
-  List li =[
-    {'id':1,
-    'name':'shakib'},
-    {'id':2,
-    'name':'deep'},
-    {'id':3,
-    'name':'hasan'},
-    
-  ];
-  userId= li.where((value)=> value['id']==id);
- 
-}
 
+  inputUserInfo() {
+    print("enter Your name");
+    String? name = stdin.readLineSync();
+    print("enter your age");
+    int? age = int.parse(stdin.readLineSync()!);
+    print("your Info is :");
+    var printOutput = printObject(name! + " ", age);
+    print(printOutput);
+  }
 }

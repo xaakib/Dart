@@ -34,24 +34,45 @@ List movieData = [
 
 ];
 
-
 void main() {
-  List li =[];
-  for (var i in movieData){
-    
-    Map<String, dynamic> map = {
-  'name': i['title'],
-      'price': i['price'],
-};
-    li.add(map);
-  }
+  var x = 4;
   
- print(li);
-//   li.removeAt(1);
-   li.removeAt(0);
-  print(li);
+  fun(){
+    var x = "no";
+    print("This is the $x");
+  }
+   pri(){
+     var t = 2;
+       fun();
+     return t;
+    
+  }
+ 
+  print("last$x");
+  print(pri());
+  
+    
+  }
+
+
+// void main() {
+//   List li =[];
+//   for (var i in movieData){
+    
+//     Map<String, dynamic> map = {
+//   'name': i['title'],
+//       'price': i['price'],
+// };
+//     li.add(map);
+//   }
+  
+//  print(li);
+// //   li.removeAt(1);
+//    li.removeAt(0);
+//   print(li);
+  
   
   
   
  
-}
+// }

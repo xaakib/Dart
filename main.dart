@@ -26,6 +26,13 @@
 //   // print(listClass.li);
 // }
 void main() {
+  
+  /// per 3 numbers letter comma!
+    int number = 1171123;
+var f = NumberFormat("###,###.0#", "en_US");
+print(f.format(number));
+  
+  /////
     List li = [];
   // Creating a string
   String name = "s h a k i b";

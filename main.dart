@@ -26,25 +26,39 @@
 //   // print(listClass.li);
 // }
 void main() {
-  
-  /// per 3 numbers letter comma!
-    int number = 1171123;
-var f = NumberFormat("###,###.0#", "en_US");
-print(f.format(number));
-  
-  /////
-    List li = [];
-  // Creating a string
-  String name = "s h a k i b";
-    
-  // Splitting each
-  // character of the string
-var output = name.split(' ');
- li = output;
- li.sort();
-  print(li);
+  int num = 1;
+  var varList = [
+    {'name': "shakib", "id": 2},
+    {'name': "other", "id": 1},
+    {'name': "shakib", "id": 2},
+    {'name': "someone", "id": 3},
+  ];
 
+  int indexValue = varList.indexWhere((element) => element["id"] == num);
+  bool hasValue = indexValue > -1 ? true : false;
+  print(hasValue);
 }
+
+// void main() {
+  
+//   /// per 3 numbers letter comma!
+//     int number = 1171123;
+// var f = NumberFormat("###,###.0#", "en_US");
+// print(f.format(number));
+  
+//   /////
+//     List li = [];
+//   // Creating a string
+//   String name = "s h a k i b";
+    
+//   // Splitting each
+//   // character of the string
+// var output = name.split(' ');
+//  li = output;
+//  li.sort();
+//   print(li);
+
+// }
 
 // List movieData = [
 //   {"id": 1, "title": "August 1975", "mediaid": 2, "price": 10, "discount": 5, "imageurl": "https://mgrdev.cinebaz.com/storage/dropzon/2021-07/small/augost751020x1560_1626336629.jpg", "createdAt": "2021-10-10 09:29:37"},

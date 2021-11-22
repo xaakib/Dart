@@ -25,18 +25,7 @@
 //   // print("ClassList");
 //   // print(listClass.li);
 // }
-import 'dart:io';
 
-void main() {
-  Directory dr = Directory("/home");
-
-  if (dr.existsSync()) {
-    var output = dr.watch();
-    print("Exist $output");
-  } else {
-    print("Not Exist");
-  }
-}
 //  int num = 1;
 //   var varList = [
 //     {'name': "shakib", "id": 2},

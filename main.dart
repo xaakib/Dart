@@ -15,7 +15,7 @@
 
 //   for (var i = 0; i < list.length; i++) {
 //     print(i);
-  
+
 //   }
 //   // demoClass.inputUserInfo();
 //   // print("Thank You ! Goodbye ;)");
@@ -25,19 +25,29 @@
 //   // print("ClassList");
 //   // print(listClass.li);
 // }
-void main() {
-  int num = 1;
-  var varList = [
-    {'name': "shakib", "id": 2},
-    {'name': "other", "id": 1},
-    {'name': "shakib", "id": 2},
-    {'name': "someone", "id": 3},
-  ];
+import 'dart:io';
 
-  int indexValue = varList.indexWhere((element) => element["id"] == num);
-  bool hasValue = indexValue > -1 ? true : false;
-  print(hasValue);
+void main() {
+  Directory dr = Directory("/home");
+
+  if (dr.existsSync()) {
+    var output = dr.watch();
+    print("Exist $output");
+  } else {
+    print("Not Exist");
+  }
 }
+//  int num = 1;
+//   var varList = [
+//     {'name': "shakib", "id": 2},
+//     {'name': "other", "id": 1},
+//     {'name': "shakib", "id": 2},
+//     {'name': "someone", "id": 3},
+//   ];
+
+//   int indexValue = varList.indexWhere((element) => element["id"] == num);
+//   bool hasValue = indexValue > -1 ? true : false;
+//   print(hasValue);
 
 // void main() {
   

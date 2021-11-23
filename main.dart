@@ -1,110 +1,59 @@
-// import 'demo.dart';
-// import 'total_price.dart';
+import 'dart:io';
+import 'dart:convert';
 
-// DemoClass demoClass = DemoClass();
+Future<void> main() async {
+  final semicolon = ';'.codeUnitAt(0);
+  final result = <int>[];
 
-// void main() {
-//   // TotalPriceClass totalPriceClass = TotalPriceClass();
-//   // print(totalPriceClass.loop());
+  final script = File(Platform.script.toFilePath());
+  RandomAccessFile file = await script.open(mode: FileMode.read);
 
-//   List list = [
-//     {"price": 20},
-//     {"price": 38},
-//     {"price": 24},
-//   ];
+  // Deal with each byte.
+  while (true) {
+    print("object");
+    final byte = await file.readByte();
+    result.add(byte);
+    if (byte == semicolon) {
+      print(String.fromCharCodes(result));
+         print("object2");
+      await file.close();
+      break;
+    }
+  }
+}
 
-//   for (var i = 0; i < list.length; i++) {
-//     print(i);
-
-//   }
-//   // demoClass.inputUserInfo();
-//   // print("Thank You ! Goodbye ;)");
-//   // getTypeConversion("31");
-//   // getMap();
-//   // getMap2();
-//   // print("ClassList");
-//   // print(listClass.li);
+// void main(){
+//   print("Hellow");
+//   getData();
 // }
 
-//  int num = 1;
-//   var varList = [
-//     {'name': "shakib", "id": 2},
-//     {'name': "other", "id": 1},
-//     {'name': "shakib", "id": 2},
-//     {'name': "someone", "id": 3},
-//   ];
-
-//   int indexValue = varList.indexWhere((element) => element["id"] == num);
-//   bool hasValue = indexValue > -1 ? true : false;
-//   print(hasValue);
-
-// void main() {
+// // void main() {
+// //   String path = '/home';
+// //   // listOfPath(path);
+// //   print("Starting");
+// //   getData();
   
-//   /// per 3 numbers letter comma!
-//     int number = 1171123;
-// var f = NumberFormat("###,###.0#", "en_US");
-// print(f.format(number));
-  
-//   /////
-//     List li = [];
-//   // Creating a string
-//   String name = "s h a k i b";
-    
-//   // Splitting each
-//   // character of the string
-// var output = name.split(' ');
-//  li = output;
-//  li.sort();
-//   print(li);
-
+// // }
+// Future<void> getData() async {
+//     var file = File(Platform.script.toFilePath());
+//     print(await (file.readAsString(encoding: ascii)));
+//   }
+// void listOfPath(String path) {
+//   Directory dir = Directory(path);
+//   if (dir.existsSync()) {
+//     for (FileSystemEntity pathValue in dir.listSync()) {
+//       print("pathValue : " + pathValue.path);
+//     }
+//   }
+//   try {} catch (e) {
+//     print("Has Error : $e");
+//   }
 // }
 
-// List movieData = [
-//   {"id": 1, "title": "August 1975", "mediaid": 2, "price": 10, "discount": 5, "imageurl": "https://mgrdev.cinebaz.com/storage/dropzon/2021-07/small/augost751020x1560_1626336629.jpg", "createdAt": "2021-10-10 09:29:37"},
-//    {"id": 1, "title": "name add", "mediaid": 2, "price": 20, "discount": 5, "imageurl": "https://mgrdev.cinebaz.com/storage/dropzon/2021-07/small/augost751020x1560_1626336629.jpg", "createdAt": "2021-10-10 09:29:37"},
-//  {"id": 1, "title": "name 2", "mediaid": 2, "price": 20, "discount": 5, "imageurl": "https://mgrdev.cinebaz.com/storage/dropzon/2021-07/small/augost751020x1560_1626336629.jpg", "createdAt": "2021-10-10 09:29:37"},
-
-// ];
-
-// void main() {
-//   var x = 4;
-  
-//   fun(){
-//     var x = "no";
-//     print("This is the $x");
-//   }
-//    pri(){
-//      var t = 2;
-//        fun();
-//      return t;
-    
-//   }
- 
-//   print("last$x");
-//   print(pri());
-  
-    
-//   }
-
-
-// void main() {
-//   List li =[];
-//   for (var i in movieData){
-    
-//     Map<String, dynamic> map = {
-//   'name': i['title'],
-//       'price': i['price'],
-// };
-//     li.add(map);
-//   }
-  
-//  print(li);
-// //   li.removeAt(1);
-//    li.removeAt(0);
-//   print(li);
-  
-  
-  
-  
- 
-// }
+//  if (dr.existsSync()) {
+//     var output = dr.watch();
+//     print(dr.path);
+//     print("Exist $output");
+//   } else {
+//     print("Not Exist");
+//   

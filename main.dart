@@ -72,4 +72,20 @@ void main() {
   //     print("&" * i);
   //   }
   // }
+
+  final passwordValidator = PasswordValidator();
+  print(passwordValidator.callMethod("32rybewherwerhcuwf"));
+  if (passwordValidator.callMethod("urfdsgfg74374")) {
+    print("the password is less teen");
+  } else {
+    print("this is False number less then 10");
+  }
+  passwordValidator.callMethod("hi xaakib");
+  print(passwordValidator.callMethod("hi xaakib"));
+}
+
+class PasswordValidator {
+  bool callMethod(String password) {
+    return password.length < 10;
+  }
 }

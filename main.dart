@@ -73,15 +73,28 @@ void main() {
   //   }
   // }
 
-  final passwordValidator = PasswordValidator();
-  print(passwordValidator.callMethod("32rybewherwerhcuwf"));
-  if (passwordValidator.callMethod("urfdsgfg74374")) {
-    print("the password is less teen");
+  // final passwordValidator = PasswordValidator();
+  // print(passwordValidator.callMethod("32rybewherwerhcuwf"));
+  // if (passwordValidator.callMethod("urfdsgfg74374")) {
+  //   print("the password is less teen");
+  // } else {
+  //   print("this is False number less then 10");
+  // }
+  // passwordValidator.callMethod("hi xaakib");
+  // print(passwordValidator.callMethod("hi xaakib"));
+////
+  ///
+  ///
+  ///NULL SEFTY CHECK
+  String? name;
+  // ignore: unnecessary_null_comparison
+  if (name == null) {
+    print("Text is Null : $name");
+    name = "shakib";
+    print("now Replecd name : $name");
   } else {
-    print("this is False number less then 10");
+    print("nme Not null");
   }
-  passwordValidator.callMethod("hi xaakib");
-  print(passwordValidator.callMethod("hi xaakib"));
 }
 
 class PasswordValidator {

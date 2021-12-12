@@ -86,15 +86,39 @@ void main() {
   ///
   ///
   ///NULL SEFTY CHECK
-  String? name;
-  // ignore: unnecessary_null_comparison
-  if (name == null) {
-    print("Text is Null : $name");
-    name = "shakib";
-    print("now Replecd name : $name");
-  } else {
-    print("nme Not null");
+  // String? name;
+  // // ignore: unnecessary_null_comparison
+  // if (name == null) {
+  //   print("Text is Null : $name");
+  //   name = "shakib";
+  //   print("now Replecd name : $name");
+  // } else {
+  //   print("nme Not null");
+  // }
+
+  Map<String, dynamic> mapdata = {
+    "name": "xaakib",
+    "age": 22,
+  };
+  Map<String, dynamic> mapdata2 = {
+    "name": "unknow",
+    "age": 00,
+  };
+  List li = [];
+  List li2 = [];
+
+  print(li);
+  print(li2);
+  li.add(mapdata);
+  li.add(mapdata2);
+
+  print(li);
+  for (var i = 0; i < li.length; i++) {
+    print("${li[i]['name']} " + "${li[i]['age']}");
+    Map<String, dynamic> hasmap = {"${li[i]['name']}": "${li[i]['age']}"};
+    li2.add(hasmap);
   }
+  print(li2);
 }
 
 class PasswordValidator {

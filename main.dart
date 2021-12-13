@@ -190,4 +190,21 @@ void main() {
 //       break;
 //   }
 // }
+int counter = 0;
+
+  Future<void> fetchUserOrder() {
+    return Future.delayed(const Duration(microseconds: 2), () {
+      print('Large Latte');
+      counter ++;
+
+    print("counter is $counter");
+      fetchUserOrder();
+
+    });
+  }
+
+  print("hellow world First ");
+
+  fetchUserOrder();
+  print("Hellow world 2");
 }

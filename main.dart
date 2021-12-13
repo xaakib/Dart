@@ -1,6 +1,8 @@
 // import 'dart:io';
 // import 'dart:convert';
+import 'dart:io';
 
+void main() {
 // Future<void> main() async {
 //   // final semicolon = ';'.codeUnitAt(0);
 //   // final result = <int>[];
@@ -58,7 +60,6 @@
 // //     print("Not Exist");
 // //
 
-void main() {
   // print("hellow");
 
   // for (int i = 0; i < 10; i++) {
@@ -96,33 +97,97 @@ void main() {
   //   print("nme Not null");
   // }
 
-  Map<String, dynamic> mapdata = {
-    "name": "xaakib",
-    "age": 22,
-  };
-  Map<String, dynamic> mapdata2 = {
-    "name": "unknow",
-    "age": 00,
-  };
-  List li = [];
-  List li2 = [];
+  // Map<String, dynamic> mapdata = {
+  //   "name": "xaakib",
+  //   "age": 22,
+  // };
+  // Map<String, dynamic> mapdata2 = {
+  //   "name": "unknow",
+  //   "age": 00,
+  // };
+  // List li = [];
+  // List li2 = [];
 
-  print(li);
-  print(li2);
-  li.add(mapdata);
-  li.add(mapdata2);
+  // print(li);
+  // print(li2);
+  // li.add(mapdata);
+  // li.add(mapdata2);
 
-  print(li);
-  for (var i = 0; i < li.length; i++) {
-    print("${li[i]['name']} " + "${li[i]['age']}");
-    Map<String, dynamic> hasmap = {"${li[i]['name']}": "${li[i]['age']}"};
-    li2.add(hasmap);
-  }
-  print(li2);
-}
+  // print(li);
+  // for (var i = 0; i < li.length; i++) {
+  //   print("${li[i]['name']} " + "${li[i]['age']}");
+  //   Map<String, dynamic> hasmap = {"${li[i]['name']}": "${li[i]['age']}"};
+  //   li2.add(hasmap);
+  // }
+  // print(li2);
 
-class PasswordValidator {
-  bool callMethod(String password) {
-    return password.length < 10;
-  }
+//   String value = "Nagat";
+//   swicthFuntion("Hi");
+// }
+
+// swicthFuntion(value) {
+//   switch (value) {
+//     case "Bkash":
+//       {
+//         print("Hello Bkash");
+//       }
+//       break;
+//     case "Nagat":
+//       {
+//         print("Hello Nagat");
+//       }
+//       break;
+//     case "SSL":
+//       {
+//         print("Hellow SSL");
+//       }
+//       break;
+//     default:
+//       {
+//         print("Invalid choice");
+//       }
+//       break;
+//   }
+// }
+
+// class PasswordValidator {
+//   bool callMethod(String password) {
+//     return password.length < 10;
+//   }
+// }
+//   List list = ["Samsung", "Lenovo", "Walton"];
+//   print( "Choose Once : " + list.toString());
+
+//   var dartInput = stdin.readLineSync();
+//   var condition = dartInput;
+//   switchCaseFuntion(condition);
+// }
+
+// switchCaseFuntion(condition) {
+//   switch (condition) {
+//     case "Samsung":
+//       {
+//         print("hello Samsung");
+//       }
+//       break;
+//     case "Lenovo":
+//       {
+//         print("hellow lenovo");
+//       }
+//       break;
+//     case "Walton":
+//       {
+//         print("Hello Walton");
+//       }
+//       break;
+//     default:
+//       {
+//         print("Invalid choose");
+//          print("Please enter you ");
+//         var dartInput = stdin.readLineSync();
+//         switchCaseFuntion(dartInput);
+//       }
+//       break;
+//   }
+// }
 }

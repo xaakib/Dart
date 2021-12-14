@@ -293,4 +293,40 @@ void main() {
 //     display();
 //   }
 // }
+//   Boy boy = Boy();
+//   Girl girl = Girl();
+//   boy.display();
+//   girl.display();
+// }
+
+// class Student {
+//   final String name;
+//   final int age;
+
+//   Student(this.name, this.age);
+
+
+// }
+
+// abstract class Person {
+//   void display();
+  
+//   void studentFuntion(){
+
+//   }
+// }
+
+// class Boy extends Person {
+//   @override
+//   void display() {
+//     print("Hellow I`m Boy Class");
+//   }
+// }
+
+// class Girl extends Person {
+//   @override
+//   void display() {
+//     print("Hi I`m Girl Class");
+//   }
+// }
 }

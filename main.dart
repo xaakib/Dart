@@ -261,35 +261,36 @@ void main() {
 //   }
 
 // }
-  Child child = Child();
-  child.message();
-}
+//   Child child = Child();
+//   child.message();
+// }
 
-class Super {
-  void display() {
-    print("This is the super class method");
-  }
+// class Super {
+//   void display() {
+//     print("This is the super class method");
+//   }
 
-  void display2() {
-    print("This is the super class method2");
-  }
-}
+//   void display2() {
+//     print("This is the super class method2");
+//   }
+// }
 
-// Child class inherits Super
-class Child extends Super {
-  void display() {
-    print("This is the child class");
-  }
+// // Child class inherits Super
+// class Child extends Super {
+//   void display() {
+//     print("This is the child class");
+//   }
 
-  // Note that message() is only in Student class
-  void message() {
-    // will invoke or call current class display() method
-    // display2();
+//   // Note that message() is only in Student class
+//   void message() {
+//     // will invoke or call current class display() method
+//     // display2();
 
-    // will invoke or call parent class displa() method
-    display();
-    super.display2();
-    display2();
-    display();
-  }
+//     // will invoke or call parent class displa() method
+//     display();
+//     super.display2();
+//     display2();
+//     display();
+//   }
+// }
 }

@@ -190,21 +190,106 @@ void main() {
 //       break;
 //   }
 // }
-int counter = 0;
+// int counter = 0;
 
-  Future<void> fetchUserOrder() {
-    return Future.delayed(const Duration(microseconds: 2), () {
-      print('Large Latte');
-      counter ++;
+//   Future<void> fetchUserOrder() {
+//     return Future.delayed(const Duration(microseconds: 2), () {
+//       print('Large Latte');
+//       counter ++;
 
-    print("counter is $counter");
-      fetchUserOrder();
+//     print("counter is $counter");
+//       fetchUserOrder();
 
-    });
+//     });
+//   }
+
+//   print("hellow world First ");
+
+//   fetchUserOrder();
+//   print("Hellow world 2");
+
+//   final Student student = Student(name: "Xaakib");
+
+//   // student.stdName = "Here";
+//   student.funtion();
+// }
+
+// class Student {
+//   final String name;
+
+//   Student({required this.name});
+//   funtion() {
+//     print("hellow $name");
+//   }
+// }
+//   var stduentInstance = Student();
+
+//   print(stduentInstance.geStudent());
+// }
+
+// class Student {
+//   static String? name;
+//   geStudent() {
+//     print("Hellow");
+//     name = "Xaakib";
+//     name = "Prio";
+//     print(name);
+//   }
+// }
+
+//   Bike bike = Bike();
+//   bike.init();
+// }
+
+// class Car {
+//   int speed = 800;
+//   void init() {
+//     print("Car Init");
+//   }
+// }
+
+// class Bike extends Car {
+//   int speed = 900;
+//   void display() {
+//     print("The car Speed${super.speed}");
+//   }
+
+//   void init() {
+//     print("hellow Bike Init");
+//     super.init();
+//     print("hellow 2");
+//   }
+
+// }
+  Child child = Child();
+  child.message();
+}
+
+class Super {
+  void display() {
+    print("This is the super class method");
   }
 
-  print("hellow world First ");
+  void display2() {
+    print("This is the super class method2");
+  }
+}
 
-  fetchUserOrder();
-  print("Hellow world 2");
+// Child class inherits Super
+class Child extends Super {
+  void display() {
+    print("This is the child class");
+  }
+
+  // Note that message() is only in Student class
+  void message() {
+    // will invoke or call current class display() method
+    // display2();
+
+    // will invoke or call parent class displa() method
+    display();
+    super.display2();
+    display2();
+    display();
+  }
 }

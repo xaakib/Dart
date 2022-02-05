@@ -305,12 +305,11 @@ void main() {
 
 //   Student(this.name, this.age);
 
-
 // }
 
 // abstract class Person {
 //   void display();
-  
+
 //   void studentFuntion(){
 
 //   }
@@ -329,4 +328,31 @@ void main() {
 //     print("Hi I`m Girl Class");
 //   }
 // }
+
+  Direction dirct = Direction.Other;
+
+  if (dirct == Direction.West) {
+    print("this is the weat");
+  } else {
+    getDirection(dirct);
+  }
+}
+
+enum Direction { North, West, South, East, Other }
+
+getDirection(dir) {
+  switch (dir) {
+    case Direction.East:
+      print("The East Direction");
+      break;
+    case Direction.South:
+      print("The South Direction");
+      break;
+    case Direction.North:
+      print("The Direction North");
+      break;
+    default:
+      print("THis is Default method");
+      break;
+  }
 }

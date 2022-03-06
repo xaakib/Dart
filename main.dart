@@ -1,5 +1,6 @@
 // import 'dart:io';
 // import 'dart:convert';
+import 'dart:convert';
 import 'dart:io';
 
 void main() {
@@ -356,31 +357,72 @@ void main() {
 //       break;
 //   }
 
-  final Direction direction = Direction.Left;
+//   final Direction direction = Direction.Left;
 
-  if (direction == Direction.Bottom) {
-    print("Direction Bottom");
-  } else {
-    getDirectionResult(direction);
+//   if (direction == Direction.Bottom) {
+//     print("Direction Bottom");
+//   } else {
+//     getDirectionResult(direction);
+//   }
+// }
+
+// enum Direction { Top, Right, Left, Bottom }
+// getDirectionResult(dirt) {
+//   switch (dirt) {
+//     case Direction.Top:
+//       print("Direction is Top");
+//       break;
+//     case Direction.Left:
+//       print("Direction is Left");
+//       break;
+
+//     case Direction.Right:
+//       print("Direction is Right");
+//       break;
+
+//     default:
+//       print("Noting Selected");
+//       break;
+//   }
+
+// compire to  set
+  // UserData userData;
+  Map map = {
+    "name": "Dastagir Ahmed",
+    "age": 34,
+    "country": "Bangladesh",
+  };
+
+  Map hasData = {
+    "name": "Dastagir Ahmed",
+    "age": 34,
+    "country": "Bangladesh",
+    "key": map,
+  };
+  var jsonData = jsonDecode(hasData.toString());
+  print(jsonData);
+
+  // UserData.fromJson();
+}
+
+class UserData {
+  final String name;
+  final int age;
+  final String address;
+
+  UserData({required this.name, required this.age, required this.address});
+
+  factory UserData.fromJson(Map<String, dynamic> json) {
+    return UserData(
+        name: json['name'], age: json['age'], address: json['country']);
   }
 }
 
-enum Direction { Top, Right, Left, Bottom }
-getDirectionResult(dirt) {
-  switch (dirt) {
-    case Direction.Top:
-      print("Direction is Top");
-      break;
-    case Direction.Left:
-      print("Direction is Left");
-      break;
 
-    case Direction.Right:
-      print("Direction is Right");
-      break;
-
-    default:
-      print("Noting Selected");
-      break;
-  }
-}
+//  factory UserData.fromJson(Map<String, dynamic> json) {
+//     return UserData(
+//       name: json['userId'],
+//       id: json['id'],
+//       title: json['title'],
+//     );
+//   }

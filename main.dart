@@ -329,30 +329,58 @@ void main() {
 //   }
 // }
 
-  Direction dirct = Direction.Other;
+//   Direction dirct = Direction.Other;
 
-  if (dirct == Direction.West) {
-    print("this is the weat");
+//   if (dirct == Direction.West) {
+//     print("this is the weat");
+//   } else {
+//     getDirection(dirct);
+//   }
+// }
+
+// enum Direction { North, West, South, East, Other }
+
+// getDirection(dir) {
+//   switch (dir) {
+//     case Direction.East:
+//       print("The East Direction");
+//       break;
+//     case Direction.South:
+//       print("The South Direction");
+//       break;
+//     case Direction.North:
+//       print("The Direction North");
+//       break;
+//     default:
+//       print("THis is Default method");
+//       break;
+//   }
+
+  final Direction direction = Direction.Left;
+
+  if (direction == Direction.Bottom) {
+    print("Direction Bottom");
   } else {
-    getDirection(dirct);
+    getDirectionResult(direction);
   }
 }
 
-enum Direction { North, West, South, East, Other }
+enum Direction { Top, Right, Left, Bottom }
+getDirectionResult(dirt) {
+  switch (dirt) {
+    case Direction.Top:
+      print("Direction is Top");
+      break;
+    case Direction.Left:
+      print("Direction is Left");
+      break;
 
-getDirection(dir) {
-  switch (dir) {
-    case Direction.East:
-      print("The East Direction");
+    case Direction.Right:
+      print("Direction is Right");
       break;
-    case Direction.South:
-      print("The South Direction");
-      break;
-    case Direction.North:
-      print("The Direction North");
-      break;
+
     default:
-      print("THis is Default method");
+      print("Noting Selected");
       break;
   }
 }

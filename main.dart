@@ -387,37 +387,36 @@ void main() {
 
 // compire to  set
   // UserData userData;
-  Map map = {
-    "name": "Dastagir Ahmed",
-    "age": 34,
-    "country": "Bangladesh",
-  };
+//   Map map = {
+//     "name": "Dastagir Ahmed",
+//     "age": 34,
+//     "country": "Bangladesh",
+//   };
 
-  Map hasData = {
-    "name": "Dastagir Ahmed",
-    "age": 34,
-    "country": "Bangladesh",
-    "key": map,
-  };
-  var jsonData = jsonDecode(hasData.toString());
-  print(jsonData);
+//   Map hasData = {
+//     "name": "Dastagir Ahmed",
+//     "age": 34,
+//     "country": "Bangladesh",
+//     "key": map,
+//   };
+//   var jsonData = jsonDecode(hasData.toString());
+//   print(jsonData);
 
-  // UserData.fromJson();
-}
+//   // UserData.fromJson();
+// }
 
-class UserData {
-  final String name;
-  final int age;
-  final String address;
+// class UserData {
+//   final String name;
+//   final int age;
+//   final String address;
 
-  UserData({required this.name, required this.age, required this.address});
+//   UserData({required this.name, required this.age, required this.address});
 
-  factory UserData.fromJson(Map<String, dynamic> json) {
-    return UserData(
-        name: json['name'], age: json['age'], address: json['country']);
-  }
-}
-
+//   factory UserData.fromJson(Map<String, dynamic> json) {
+//     return UserData(
+//         name: json['name'], age: json['age'], address: json['country']);
+//   }
+// }
 
 //  factory UserData.fromJson(Map<String, dynamic> json) {
 //     return UserData(
@@ -426,3 +425,36 @@ class UserData {
 //       title: json['title'],
 //     );
 //   }
+
+  //////
+//  inharitence class
+  ///
+  var aObject = A();
+  aObject.checkCLass();
+  aObject.checkFunioninB();
+
+  aObject.checkIsItCClass("THis Is peramiter value");
+}
+
+class B {
+  void checkFunioninB() {
+    print("B Funion");
+  }
+}
+
+class C {
+  void checkIsItCClass(String value) {
+    print(value);
+  }
+}
+
+class A extends C with B {
+  @override
+  void checkFunioninB() {
+    super.checkFunioninB();
+  }
+
+  void checkCLass() {
+    print("Check Class");
+  }
+}
